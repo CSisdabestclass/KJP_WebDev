@@ -3,12 +3,61 @@
     <head>
         <title>CSS Styling with Color</title>
         <meta charset="UTF-8">    
-    </head>
-    even{
+        <style>
+            #even{
+                background-color: blue;
+                border:solid 9px;
+                border-color: orange;
+                width:200px;
+                height:200px;
+            }
+            p{
+                color:aliceblue;
+                text-align:center;
+                font-size:20px;
+            }
+            #odd{
+                background-color: rgb(238, 255, 7);
+                border:solid 9px;
+                border-color: rgb(51, 255, 0);
+                width:200px;
+                height:200px;
+            }
+            h4{
+                color:rgb(183, 224, 105);
+                text-align:center;
+                font-size:20px;
+            }
+            #hi{
+                background-color: rgb(255, 7, 7);
+                border:solid 9px;
+                border-color: rgb(0, 17, 255);
+                width:200px;
+                height:200px;
+            }
+            h5{
+                color:rgb(22, 221, 22);
+                text-align:center;
+                font-size:20px;
+            }
 
-    }
+        </style>
+    </head>
         <body>
-            <p id="even">
+            <div id="even">
+            <p>
                 Complementary
             </p>
+            </div>
+            <div>
+            <h4 id="odd">
+                Analogous
+            </h4>
+            </div>
+            <div>
+            <h5 id="hi">
+                Triadic
+            </h5>
+            </div>
         </body>
+</html>
