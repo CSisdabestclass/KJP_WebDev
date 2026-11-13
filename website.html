@@ -3,6 +3,9 @@
     <head>
         <title>Basketball</title>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
         <style>
         h1{
             text-align: center;
@@ -10,7 +13,8 @@
         }
         body{
             background-color: darkgrey;
-            color:rgb(0, 0, 0)
+            color:rgb(0, 0, 0);
+            font-family: oswald, sans-serif;
         }
         h2{
             color:rgb(153, 14, 14);
@@ -35,15 +39,40 @@
             display: flex;
             justify-content: center;
         }
+        p{
+            margin: 0 auto;
+            max-width: 900px;
+            line-height: 1.6;
+        }
+        ol{
+           display: flex;
+           justify-content: center;
+        }
+        #img{
+            display: flex;
+            justify-content: center; 
+        }
+        #source{
+            display: flex;
+           justify-content: center;
+        }
+        let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA5ud2cNBl1Q-LGMOsPRulRLtpiRzXlWwZGNSQ2oVOOA&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh8pi5tbqO72ywEvPBUezK8OoNlYwvhCdL4Tlj9iAbuQ&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Qp6_yqroIBufvKPawNln4WRgq6Zm2rbf2hlJa6oLqw&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-G5YwjTlbQiokrHlZVNSATMsDjIqSaoAcVgIzysmCwg&s"]
+            let current = 0 
+            function changeImage(){
+                current += 1;
+                if (current > 3){
+                    current = 0;
+                }
+                document.getElementById("rabbit").src = images[current]
     </style>
     </head>
     <body>
         <h1>Basketball</h1>
         <div id="image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQktNu1a5HRo4uBPMDhklbc4JQR96zmo39O8U4X5eo0Vg&s=10" width="400px">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQktNu1a5HRo4uBPMDhklbc4JQR96zmo39O8U4X5eo0Vg&s=10" alt="Basketball" width="400px">
         </div>
         <div id="web">
-         <h6>Image from <a href="https://lionsdigest1.com/23173/sports/a-dramatic-start-to-the-nba-season-an-in-depth-look/" target="_blank"> Lion's Digest</a><h6>
+         <h6>Image from <a href="https://lionsdigest1.com/23173/sports/a-dramatic-start-to-the-nba-season-an-in-depth-look/" target="_blank"> Lion's Digest</a></h6>
         </div>
         <h2>Basketball De-Brief</h2>
         <div id="paragraph">
@@ -54,28 +83,24 @@
             <p>      Basketball has a lot of rules but you just need to know the main one. The main rule is that you can't run while holding the ball. If you do, its called a "travel". The way you can move around with the ball is by dribbling. This is when you bounce the ball on the ground as you run/walk. Once you stop dribbling, you have to stop walking as well. If you start dribbling after you held it, it would be considered a "travel". Also, if you jump while holding the ball, thats a "travel" but if you get rid of the ball before you hit the ground (like shooting or passing), than your OK.</p>
         </div>
             <h2>GOATs of Basketball</h2>
+            <ol>
+            <ol>Michael Jordan</ol>
+            <ol>LeBron James</ol>
+            <ol>Kobe Bryant</ol>
+            <ol>Stephen Curry</ol>
+            <ol>Kevin Durant</ol>
+            <ol>Shaquille O'Neal</ol>
+            <ol>Tim Duncan</ol>
+            </ol>
         <div id="pics">
             <div id="Michael">
-                <div id="hello">
-                    <p>
-                    <br>Michael Jordan
-                    </p>
-                </div>
-                <div id="micheal">
+                
+                <div id="img">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA5ud2cNBl1Q-LGMOsPRulRLtpiRzXlWwZGNSQ2oVOOA&s=10" alt="Michael Jordan" width="240px">
                 </div>
-                <h6>Image from <a href="https://picryl.com/media/jordan-elgrafico-1992-ae61cb" target="_blank">PICRYL</a></h6>
-            </div>
-            <div id="Magic">
-                <div id="name">
-                    <p>
-                    <br>Magic Johnson
-                    </p>
+                <div id = "source">
+                    <h6>Images from <a href="https://picryl.com/media/jordan-elgrafico-1992-ae61cb" target="_blank">PICRYL, </a></h6>
                 </div>
-                <div id="image_2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Magic_Johnson_Steve_Lipofsky.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Magic Johnson" width="240px">
-                </div>
-                <h6>Image from <a href="https://commons.wikimedia.org/wiki/File:Magic_Johnson_Steve_Lipofsky.jpg" target="_blank">Wikimedia Commons</a></h6>
             </div>
         </div>
     </body>
