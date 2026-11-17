@@ -23,10 +23,28 @@
            #opening_images{
             display: flex;
             justify-content: space-around;
-            margin-bottom: 70px;
+            margin-bottom: 40px;
            }
            span{
             text-decoration: underline;
+           }
+           #img{
+                display: flex;
+                justify-content: center;
+           }
+           #source{
+            display: flex;
+            justify-content: center;
+            color: green;
+           }
+           #source_2{
+            display: flex;
+            justify-content: center;
+            color: green;
+           }
+           button{
+            display: flex;
+            justify-content: center;
            }
         </style>
     </head>
@@ -37,10 +55,31 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1iaNwSNCZc_J8LZv6pR6L1PxU3RlhPVpPK-_kes88LQ&s=10" alt="image1" width="300px">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjaSV2PJi1fMEKa5oVQS237Wil3Yrr5LgWhwJ74zZM_w&s=10" alt="image1" width="300px">
             </div>
+            <div id = "source_2">
+                <h6>Images from <a href="https://www.rawpixel.com/search/zion%20canyon?page=1&path=1522&sort=curated">Rawpixel</a>, <a href="https://www.flickr.com/photos/sfcityscape/26270362072">Flickr</a>, and <a href="https://renopenrose.getarchive.net/amp/media/red-cave-near-zion-national-park-b33496">Get Archive</a></h6>
+            </div>
             <h2>About Zion</h2>
             <p>
                 Zion is a wonderful national park in the south west of Utah and is full of geological wonders. Its full of rivers, paths, and red-rock canyons. It has around 150,000 acres of canyons with towering Navajo Sandstone Cliffs to explore with you and your family. Not only is the geology amazing, so is the animals. There are over 400 different species of animals with over 78 Mammal species, 291 types of Birds and 37 species of Reptiles and Amphibians.
             </p>
-            <h2>Why <span>YOU</span> Should Go</h2>
+            <div id="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyozEc6hfggcSR8bDRWWLQK7rXo19TSvShAe9mZj2rQQ&s=10" alt="Zion Pics Animals" id =
+                "Zion_Pics_Animals" onmouseout="changeImage()">
+            </div>
+            <div id = "source">
+                <h6>Images from <a href="https://www.flickr.com/photos/dianasch/50244291408" target="_blank">FlickrL</a>, <a href="https://www.facebook.com/groups/84004645614/posts/10176258514330615/">Facebook</a>, <a href="https://picryl.com/media/ringtail-bassariscus-astutus-d1ceaf">Picryl</a>, <a href="https://www.rawpixel.com/search/utah%20wildlife?page=1&path=1522&sort=curated">Rawpixel</a>, <a href="https://boudewijnhuijgens.getarchive.net/amp/media/american-marten-crater-lake-national-park-2014-620b11">Get Archive</a>, <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYc7x-5wNOEo-_R112og1w_t4bUmS5p9CfM58N9uhuQ&s=10">Animalia</a>, and <a href="https://www.snappit.app/explore/greater-roadrunner">Snappit</a></h6>
+            </div>
+            <script>
+                let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyozEc6hfggcSR8bDRWWLQK7rXo19TSvShAe9mZj2rQQ&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2MSpblQhW9udDs4TE8Bx_JjrWONBaerfS7Gr4dDv3DA&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlDgCYZqwFId22ABntsg3VO94qxvP4bVDynfKnzFw14A&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx2zamQ1isCIjYO1rG0LgXcI5rSFd_PEZ3RrUp16lMTQ&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiyQQvOJrDa2dkyGsNlNaHx51FgtGYfb9ond8SsWJPvg&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYc7x-5wNOEo-_R112og1w_t4bUmS5p9CfM58N9uhuQ&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf0iMvnJz8wCmnBC_y2HRwfMC9wCebratC6jrbUMSaEA&s=10"]
+                let current = 0 
+                function changeImage(){
+                    current += 1;
+                    if (current > 6){
+                    current = 0;
+                    }
+                    document.getElementById("Zion_Pics_Animals").src = images[current]
+                }
+            </script>
+            <button>Why <span>YOU</span> Should Go</button>
         </body>
 </html>
