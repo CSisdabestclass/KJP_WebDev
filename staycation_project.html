@@ -43,8 +43,25 @@
             color: green;
            }
            button{
-            display: flex;
-            justify-content: center;
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+                background-color: rgba(0, 128, 0, 0.514);
+                color:  rgba(148, 89, 31, 0.767);
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-family: Vast Shadow;
+                border-radius: 4px;
+           }
+           #Zion_Pics_Animals{
+            height: 250px;
+           }
+           #list{
+            display: none;
+            align-items: center;
+            justify-content: space-around;
+            color: green;
            }
         </style>
     </head>
@@ -56,7 +73,7 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjaSV2PJi1fMEKa5oVQS237Wil3Yrr5LgWhwJ74zZM_w&s=10" alt="image1" width="300px">
             </div>
             <div id = "source_2">
-                <h6>Images from <a href="https://www.rawpixel.com/search/zion%20canyon?page=1&path=1522&sort=curated">Rawpixel</a>, <a href="https://www.flickr.com/photos/sfcityscape/26270362072">Flickr</a>, and <a href="https://renopenrose.getarchive.net/amp/media/red-cave-near-zion-national-park-b33496">Get Archive</a></h6>
+                <h6>Images from <a href="https://www.rawpixel.com/search/zion%20canyon?page=1&path=1522&sort=curated" target="_blank">Rawpixel</a>, <a href="https://www.flickr.com/photos/sfcityscape/26270362072" target="_blank">Flickr</a>, and <a href="https://renopenrose.getarchive.net/amp/media/red-cave-near-zion-national-park-b33496" target="_blank">Get Archive</a></h6>
             </div>
             <h2>About Zion</h2>
             <p>
@@ -67,9 +84,10 @@
                 "Zion_Pics_Animals" onmouseout="changeImage()">
             </div>
             <div id = "source">
-                <h6>Images from <a href="https://www.flickr.com/photos/dianasch/50244291408" target="_blank">FlickrL</a>, <a href="https://www.facebook.com/groups/84004645614/posts/10176258514330615/">Facebook</a>, <a href="https://picryl.com/media/ringtail-bassariscus-astutus-d1ceaf">Picryl</a>, <a href="https://www.rawpixel.com/search/utah%20wildlife?page=1&path=1522&sort=curated">Rawpixel</a>, <a href="https://boudewijnhuijgens.getarchive.net/amp/media/american-marten-crater-lake-national-park-2014-620b11">Get Archive</a>, <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYc7x-5wNOEo-_R112og1w_t4bUmS5p9CfM58N9uhuQ&s=10">Animalia</a>, and <a href="https://www.snappit.app/explore/greater-roadrunner">Snappit</a></h6>
+                <h6>Images from <a href="https://www.flickr.com/photos/dianasch/50244291408" target="_blank">FlickrL</a>, <a href="https://www.facebook.com/groups/84004645614/posts/10176258514330615/" target="_blank">Facebook</a>, <a href="https://picryl.com/media/ringtail-bassariscus-astutus-d1ceaf" target="_blank">Picryl</a>, <a href="https://www.rawpixel.com/search/utah%20wildlife?page=1&path=1522&sort=curated" target="_blank">Rawpixel</a>, <a href="https://boudewijnhuijgens.getarchive.net/amp/media/american-marten-crater-lake-national-park-2014-620b11" target="_blank">Get Archive</a>, <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYc7x-5wNOEo-_R112og1w_t4bUmS5p9CfM58N9uhuQ&s=10" target="_blank">Animalia</a>, and <a href="https://www.snappit.app/explore/greater-roadrunner" target="_blank">Snappit</a></h6>
             </div>
             <script>
+                
                 let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyozEc6hfggcSR8bDRWWLQK7rXo19TSvShAe9mZj2rQQ&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2MSpblQhW9udDs4TE8Bx_JjrWONBaerfS7Gr4dDv3DA&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlDgCYZqwFId22ABntsg3VO94qxvP4bVDynfKnzFw14A&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx2zamQ1isCIjYO1rG0LgXcI5rSFd_PEZ3RrUp16lMTQ&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiyQQvOJrDa2dkyGsNlNaHx51FgtGYfb9ond8SsWJPvg&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYc7x-5wNOEo-_R112og1w_t4bUmS5p9CfM58N9uhuQ&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf0iMvnJz8wCmnBC_y2HRwfMC9wCebratC6jrbUMSaEA&s=10"]
                 let current = 0 
                 function changeImage(){
@@ -80,6 +98,27 @@
                     document.getElementById("Zion_Pics_Animals").src = images[current]
                 }
             </script>
-            <button>Why <span>YOU</span> Should Go</button>
+            <button id="showMore" onClick="show()">Why YOU Should Go</button>
+            <div id="list">
+                <ol>
+                    <li>Extremely beautiful</li>
+                    <li>It isn't crouded</li>
+                    <li>Many things to do</li>
+                    <li>A lot of nature</li>
+                    <li>Many hikes</li>
+                </ol>
+            </div>
+            <script>
+                function show(){
+                    let element = document.getElementById("list")
+                    if (element.style.display === "flex"){
+                        element.style.display = "none"
+                        document.getElementById("showMore").innerHTML = "Why YOU Should Go "
+                    } else {
+                        element.style.display = "flex"
+                        document.getElementById("showMore").innerHTML = "Show Less"
+                    }
+                }
+            </script>
         </body>
 </html>
